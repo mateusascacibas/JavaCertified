@@ -12,6 +12,8 @@ public class ContaBancaria {
     }
 
     public void depositar(double valor) {
+    	int [] corredor;
+    	corredor.size();
         this.saldo += valor;
         System.out.println("Depósito de R$ " + valor + " realizado com sucesso na conta de " + this.titular);
     }
