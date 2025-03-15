@@ -11,12 +11,12 @@ public class ContaBancaria {
         ContaBancaria.totalContas++;
     }
 
-    public void depositar(double valor) {
+ /*   public void depositar(double valor) {
     	int [] corredor;
     	corredor.size();
         this.saldo += valor;
         System.out.println("Depósito de R$ " + valor + " realizado com sucesso na conta de " + this.titular);
-    }
+    }*/
 
     public void sacar(double valor) {
         if (valor > this.saldo) {
@@ -38,7 +38,7 @@ public class ContaBancaria {
     public void transferir(double valor, ContaBancaria destino) {
     	if(this.saldo >= valor) {
     		this.sacar(valor);
-    		destino.depositar(valor);
+    		//destino.depositar(valor);
     		System.out.println("Transferência de R$ "+  valor + " realizada com sucesso da conta de " + this.titular + " para " + destino.titular + ".");
     		this.exibirSaldo();
     		destino.exibirSaldo();
@@ -50,10 +50,10 @@ public class ContaBancaria {
     public static void main(String[] args) {
         ContaBancaria c1 = new ContaBancaria("Mateus", 100.00);
         ContaBancaria c2 = new ContaBancaria("Dayelle", 200.00);
-        c1.depositar(50);
+        //c1.depositar(50);
         c1.sacar(30);
         c1.exibirSaldo();
-        c2.depositar(50);
+        //c2.depositar(50);
         c2.sacar(300);
         c2.exibirSaldo();
         System.out.println("Total de contas criadas: " + ContaBancaria.exibirTotalContas());
